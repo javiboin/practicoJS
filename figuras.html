@@ -7,7 +7,25 @@
     <title>Figuras Geométricas</title>
 </head>
 <body>
-    <h1>Figuras geométricas</h1>
+    <header>
+        <h1>Figuras geométricas</h1>
+    </header>
+    <section>
+        <h2>Calcula el área y perímetro de un cuadrado</h2>
+
+        <form action="">
+            <label for="inputCuadrado">
+                <span>Escribe cuánto mide cada lado de tu cuadrado</span>
+                <input type="number" id="inputCuadrado" name="inputCuadrado" />
+                <button type="button" onclick="calcularPerimetroCuadrado()">
+                    Calcular el perímetro
+                </button>
+                <button type="button" onclick="calcularAreaCuadrado()">
+                    Calcular el área
+                </button>
+            </label>
+        </form>
+    </section>
 
     <script src="./figuras.js"></script>
 </body>
