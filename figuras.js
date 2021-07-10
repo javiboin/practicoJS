@@ -87,6 +87,29 @@ function calcularPerimetroTriangulo() {
 
     const perimetro = perimetroTriangulo(lado1, lado2, base);     
     alert(perimetro);
+
+    /* Calcular la Altura de un triángulo Isosceles */
+
+    /* 
+        CALCULO:
+        Altura = 
+        Raiz( (Hipotenusa * Hipotenusa) - ((base/2) * (base/2)))
+
+        Usar math.sqrt()
+    */
+    
+    function calcularAltoIsosceles (lado, base){
+        const resultado = Math.sqrt( (lado * lado) - ((base / 2) * (base / 2)) );
+        console.log(resultado);
+        return resultado;
+    };
+
+    if (lado1 === lado2 && lado1 != base){
+        console.log("Es un triángulo Isoseles");
+        calcularAltoIsosceles(lado1, base);
+    }else{
+        console.log("NO Es un triángulo Isoseles");
+    };
 };
 
 function calcularAreaTriangulo() {
