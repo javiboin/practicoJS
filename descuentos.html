@@ -32,7 +32,45 @@
     </section>
     
 
+<!-- SECCION RETO CUPONES AGREGAMOS CUPONES EN VES DE DECIR QUE DESCUENTO CORRESPONDE -->
+<!-- hacemos una validacion del cupon con array.includes(couponValue) -->
+<!-- tomamos el cupon y le hacemos el descuento en nuestra operación -->
 
+<!-- objetos cupones -->
+const coupons = [
+    {
+        name: "JuanDC_es_Batman",
+        discount: 15,
+    },
+    {
+        name: "pero_no_le_digas_a_nadie",
+        discount: 30,
+    },
+    {
+        name: "es_un_secreto",
+        discount: 25,
+    },
+];
+<!-- dejamos de usar includes para usar array.find() -->
+const isCouponValueValid = function (coupon) {
+    return coupon.name === couponValue;
+};
+
+const userCoupon = coupons.find(isCouponValueValid);
+
+if (!userCoupon) {
+    alert("El cupón " + userCouponValue + "no es válido");
+}
+<!-- despues de la validacion podemos ahorrarnos cdigo de validacion en nuestra operacion -->
+if (!userCoupon) {
+    alert("El cupón " + userCouponValue + "no es válido");
+} else {
+    const descuento = userCoupon.discount;
+    const precioConDescuento = calcularPrecioConDescuento(priceValue, descuento);
+
+    const resultP = document.getElementById("ResultP");
+    resultP.innerText = "El precio con descuento son: $" + precioConDescuento;
+}
 <!--     <section>
         <label for="InputCoupon"> 
             <span>Escribe un cupón de descuento para tu producto: </span>
