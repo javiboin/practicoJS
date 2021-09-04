@@ -5,16 +5,24 @@ const lista1 = [
   500
 ];
 
-let sumaLista1 = 0;
+const calcularMediaAritmetica = (lista) => {
+  let sumaLista = 0;
 
-for (let i = 0; i < lista1.length; i++) {
-  sumaLista1 = lista1[i];
+  for (let i = 0; i < lista.length; i++) {
+    sumaLista = lista[i];
+  };
+  
+  let promedio = sumaLista / lista.length;
+
+  mensajes(sumaLista, promedio);
+  return promedio;
 };
 
-let promedio = sumaLista1 / lista1.length;
-
-console.group("Promedio");
-  console.info("La suma de todo es: " + sumaLista1);
+const mensajes = (lista, promedio) => {
+  console.group("Promedio");
+  console.info("La suma de todo es: " + lista);
 
   console.info("El promedio de Lista 1 es : " + promedio);
 console.groupEnd();
+};
+
