@@ -8,7 +8,7 @@ Practicas de JavaScript
 - Tercer paso: crear funciones
 - Cuarto paso: integrar JavaScript con HTML 
 
-## Taller #2: porcentajes y descuentos
+## Taller #3: promedio, mediana y moda
 
 - Primer paso: definir fórmulas
 - Segundo paso: implementar las fórmulas en JavaScript
