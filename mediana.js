@@ -5,6 +5,9 @@ const lista1 = [
   400000000
 ];
 
+lista1.sort((a, b) => a - b);
+console.log(lista1);
+
 const calcularMediaAritmetica = (lista) => {
     const sumaLista = lista.reduce(
       function (valorAcumulado = 0, nuevoElemento){
