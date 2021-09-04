@@ -6,16 +6,21 @@ const lista1 = [
 ];
 
 const calcularMediaAritmetica = (lista) => {
-  let sumaLista = 0;
+/*   let sumaLista = 0;
 
   for (let i = 0; i < lista.length; i++) {
     sumaLista = lista[i];
-  };
+  }; */
+
+  const sumaLista = lista.reduce(
+    function (valorAcumulado = 0, nuevoElemento){
+      return valorAcumulado + nuevoElemento;
+    });
   
   let promedio = sumaLista / lista.length;
 
-  mensajes(sumaLista, promedio);
-  return promedio;
+  
+  return mensajes(sumaLista, promedio);
 };
 
 const mensajes = (lista, promedio) => {
