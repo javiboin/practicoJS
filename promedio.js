@@ -8,6 +8,13 @@ const lista1 = [
 let sumaLista1 = 0;
 
 for (let i = 0; i < lista1.length; i++) {
-  const element = lista1[i];
-  
-}
+  sumaLista1 = lista1[i];
+};
+
+let promedio = sumaLista1 / lista1.length;
+
+console.group("Promedio");
+  console.info("La suma de todo es: " + sumaLista1);
+
+  console.info("El promedio de Lista 1 es : " + promedio);
+console.groupEnd();
